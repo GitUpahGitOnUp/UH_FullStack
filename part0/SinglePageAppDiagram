@@ -1,3 +1,28 @@
-'''mermaid
+'''Mermaid
 
 sequence diagram
+    participant browser
+    participant server
+
+    broswer->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+    activate server
+    server->>browser: HTML DOC
+    deactivate server
+
+
+    broswer->>server: HTTP GET https://studies.cs.helsinki/exampleapp/main.css
+    activate server
+    server->>browser: CSS file
+    deactivate server
+
+
+    broswer->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js  
+    activate server
+    server->>browser: JavaScript file  
+    deactivate server
+
+
+    broswer->>server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json  
+    activate server
+    server->>browser: [{ "content": "date": }...]
+    deactivate server
