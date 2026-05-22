@@ -1,0 +1,12 @@
+'''Mermaid
+
+sequenceDiagram
+    participant browser
+    participant server
+    browswer->>server: HTTPS POST https://fullstack-exampleapp.herokuapp.com/new_note
+    Note over browser: When the form submit button is clicked, user input is sent to the server
+    activate server
+    Note over server: HTTP status code 302 URL redirect HTTP GET request to the address defined in the header's LOCATION - the address NOTES
+    server-->browser: HTTP
+    deactivate server 302 Found redirect to https://fullstack-exampleapp.herokuapp.com/notes
+    
